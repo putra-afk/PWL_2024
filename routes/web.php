@@ -100,3 +100,10 @@ Route::resource('photos', PhotoController::class)->except([
     'update',
     'destroy'
 ]);
+
+//view Route
+//View Route ini akan sering digunakan pada kasus kasus CRUD atau kasus lain yang membutuhkan view tertentu.
+//Route::get('/greeting', function () {
+//return view('blog.hello', ['name' => 'Bayu Putra Laksmana']);
+//});
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
